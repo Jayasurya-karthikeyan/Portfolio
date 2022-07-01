@@ -1,38 +1,601 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@100;200;300;400;500;600;700;800;900&family=Titillium+Web:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  /* box-sizing: border-box;
+  margin: 0;
+  padding: 0; */
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: "League Spartan", sans-serif;
+  /* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.land-bg {
+  background-image: url(./assets/bg1.jpg);
+  /* background-image: url(https://static.vecteezy.com/system/resources/previews/000/312/077/non_2x/green-3d-hexagon-tech-background-vector-illustration.jpg); */
+  /* background: url(image.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.5; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fam1 {
+  font-family: "League Spartan", sans-serif;
 }
-
+.fam2 {
+  font-family: "Quicksand", sans-serif;
+}
+.fam3 {
+  font-family: "Montserrat", sans-serif;
+}
+.fam4 {
+  font-family: "Poppins", sans-serif;
+}
+.fam5 {
+  font-family: "Nunito", sans-serif;
+}
+.fam6 {
+  font-family: "Titillium Web", sans-serif;
+}
 .App-header {
-  background-color: #282c34;
+  /* background-color: #f55252; */
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100vw;
+}
+.td-none {
+  text-decoration: none !important;
+}
+.fw-300 {
+  font-weight: 300 !important;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+.fw-600 {
+  font-weight: 600 !important;
+}
+.fw-700 {
+  font-weight: 700 !important;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.theme1 {
+  background-color: #101c2f !important; /* 1c1c1c*/
+}
+.load-bg {
+  background-color: #00000065 !important; /* 1c1c1c*/
+}
+/* .li-theme {
+  background-color: #03c7fd !important;
+}
+.da-theme {
+  background-color: #3503fd !important;
+} */
+.li-theme {
+  background-color: #313e51 !important;
+}
+.da-theme {
+  background-color: #242d3b !important;
+}
+.li-font {
+  color: #313e51;
+}
+.da-font {
+  color: #242d3b;
+}
+::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(211, 68, 255);
+  border-radius: 25px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 25px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(141, 0, 184);
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+.br-15 {
+  border-radius: 15px;
+}
+.br-20 {
+  border-radius: 20px;
+}
+.textField__label {
+  color: #fff !important;
+}
+/* body {
+  /* overflow: hidden;  */
+/* }  */
+
+/* HEADER */
+
+.li-shadow {
+  box-shadow: 0px 3px 10px #000000;
+}
+.lit-shadow {
+  box-shadow: 0px 0px 10px #ffffffe6;
+}
+.brand .name {
+  font-size: 20px;
+}
+
+.navlinks {
+  font-size: 30px !important;
+}
+
+.shade1 {
+  background-color: #012e40;
+}
+.shade2 {
+  background-color: #024959;
+}
+.shade3 {
+  background-color: #026773;
+}
+.shade4 {
+  background-color: #3ca6a6;
+}
+.shade5 {
+  /* background-color: #b09944; */
+  background-color: #2f1525;
+}
+.shade6 {
+  background-color: #f2e3d5;
+}
+.font1 {
+  color: #012e40;
+}
+.font2 {
+  color: #024959;
+}
+.font3 {
+  color: #026773;
+}
+.font4 {
+  color: #3ca6a6;
+}
+.font5 {
+  color: #f2e3d5;
+}
+
+/* .sections {
+  /* margin-right:100px; */
+/* } */
+/* .menu { */
+/* display: flex;
+  flex-direction:column; */
+/* } */
+.logo-js {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+}
+/* .logo-btn{
+} */
+
+.logo {
+  /* border-radius: 13px !important ; */
+  /* padding: 2px 8px !important; */
+}
+.name {
+  font-weight: 800 !important;
+  font-size: 22px !important;
+}
+/* .web-menu {
+  /* display: flex; */
+/* } */
+
+/* .mob-menu {
+  display: none;
+} */
+
+/* BODY  */
+.bbody {
+  padding: 12px;
+  padding-bottom: 36px;
+}
+
+#about {
+  /* min-height: 100vh; */
+  /* min-height: 86vh; */
+  /* max-height: 86vh; */
+  min-width: 97.7vw;
+  /* overflow-y: hidden; */
+  /* background-color: green; */
+  /* width: 200%; */
+}
+
+#education {
+  min-height: 100vh;
+  /* max-height: 100vh; */
+  min-width: 97.7vw;
+}
+
+#projects {
+  min-height: 100vh;
+  min-width: 97.7vw;
+}
+
+#skills {
+  min-height: 100vh;
+  min-width: 97.7vw;
+}
+
+#work {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 97.7vw;
+}
+#contact {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 97.7vw;
+}
+
+#client {
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 97.7vw;
+}
+
+/* CONTACT */
+
+/* .section-title {
+  font-weight: 800 !important;
+  text-decoration: underline;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+} */
+
+.download a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.download a i {
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ABOUT */
+.about {
+  padding-bottom: 48px;
+}
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  height: 90vh;
+}
+.info {
+  font-size: 24px;
+  /* border: 8px dashed white; */
+  border-radius: 15px;
+}
+
+.info:hover {
+  font-size: 24px;
+  /* color: black; */
+  /* background-color: yellow; */
+  /* border: 8px solid yellow; */
+  /* padding-left: 50px; */
+  /* border-radius: 15px; */
+  transition: 0.3s ease-in-out;
+}
+
+.surya-img {
+  border-bottom: 4px solid white;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 5px black);
+  /* box-shadow: 0px 0px 5px black !important; */
+  transform: scale(0.92);
+}
+
+.info h1 {
+  font-weight: 800;
+}
+
+.info h2 {
+  font-weight: 600;
+}
+
+/* EDUCATION */
+
+.schoolPic {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0px 0px 2px black);
+}
+
+.MuiTimelineSeparator-root {
+  color: black !important;
+}
+
+/* SEPARATOR */
+
+.Separator {
+  background-color: aqua;
+  height: 6px;
+  width: 40%;
+  border-radius: 3px;
+  margin: 16px 0px;
+}
+
+/* WEB */
+.web {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.web-option a {
+  text-decoration: none;
+  color: black;
+}
+
+/* MOB */
+
+.mob {
+  background-color: #e40808;
+  width: 60vw;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  top: -6px;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+}
+
+.mobile-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding-top: 24px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mobile-option {
+  font-size: 24px;
+  margin: 12px 0px;
+  display: flex;
+}
+
+.mobile-option a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+/* FOOTER */
+.footer {
+  min-height: 7vh;
+  /* background-color: #e40808; */
+  text-align: center;
+}
+
+/* SOCIALCOMPONENT */
+.social-contact a {
+  text-decoration: none;
+  color: black;
+}
+
+.social-contact a .social-icon:hover {
+  color: black;
+}
+
+/* PROJECTCARD */
+.project-git {
+  color: white !important;
+  text-decoration: none !important;
+}
+/* .project-card {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px;
+  padding: 8px 0px;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+.project-photo {
+  height: 200px;
+}
+
+.project-info {
+  margin-right: 24px;
+  border: 3px solid black;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 800;
+}
+.project-tags {
+  display: flex;
+  max-width: 60%;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: white;
+  border-radius: 4px;
+}
+.project-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-links {
+  margin-top: 6px;
+  display: flex;
+}
+.link-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:aquamarine;
+  width: max-content;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 6px;
+  border: 3px solid black;
+}
+
+.link-button i {
+  display: flex;
+  align-items: center;
+  mask-repeat: 4px;
+}
+
+@media only screen and (max-width: 720px) {
+  .project-photo {
+    width: 70%;
   }
-  to {
-    transform: rotate(360deg);
+  .project-card {
+    flex-direction: column-reverse;
+  }
+  .project-info {
+    margin-left: 0px;
+    margin-top: 12px;
+  }
+  .project-tags {
+    max-width: 100%;
+  }
+} */
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projects h1 {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* WORK */
+.work-card img {
+  height: 100px;
+}
+
+.section-title {
+  font-weight: 800 !important;
+  /* text-decoration: underline; */
+  color: #fff !important;
+  font-size: 40px !important;
+  text-align: center !important;
+}
+
+.work-card {
+  border-radius: 5px !important;
+  border: 4px solid black;
+  box-shadow: 0px 0px 3px black;
+}
+
+.work-info {
+  padding-left: 1vw;
+}
+.work-dates {
+  padding-bottom: 1vw;
+}
+.work-company {
+  font-weight: 800;
+  text-decoration: underline;
+}
+.work-list {
+  padding-bottom: 450px !important;
+}
+
+/* SKILLS */
+.skill-card {
+  /* width: max-content; */
+  /* padding: 8px px; */
+  height: 17vh;
+  justify-content: center;
+  border: 3px solid black !important;
+  margin: 3px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: aqua;
+}
+/* .skills-list {
+  border: 3px solid black !important;
+} */
+/* .skills-container {
+} */
+
+.skill-icon {
+  font-size: 4vw;
+  /* border: 3px solid black !important; */
+}
+
+/* .section-title {
+  font-weight: 800;
+  text-decoration: underline;
+} */
+
+/* .skills-section-title {
+  font-weight: 600;
+} */
+/* 
+.skill-name {
+  /* border: 3px solid black !important; */
+/* text-align: center; */
+/* }  */
+
+/* HOME */
+/* .title {
+  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+} */
+html {
+  scroll-behavior: smooth;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  /* width: 70%; */
+  margin: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home {
+    width: 90%;
   }
 }
+@media only screen and (max-width: 512px) {
+  .home {
+    width: 100%;
+  }
+}
+
+/*  */
