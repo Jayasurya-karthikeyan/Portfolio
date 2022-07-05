@@ -2,13 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function Lander() {
-  const hei = 40;
-  const wid = 40;
-  const bt = "br-15 bg-white li-shadow m-1";
+  const bt = "boxx-br bg-white li-shadow m-1 boxx";
   const start = 1; //1
   const inc = 0.1; //0.1
-  const dur = 0.15; //0.15
-  const rot = 540;
+  const dur = 0.2; //0.15
+  const rot = 720;
 
   const Boxx = ({ ind, sec }) => (
     <motion.div
@@ -21,20 +19,11 @@ export default function Lander() {
         stiffness: 40,
       }}
       style={{
-        height: hei,
-        width: wid,
-        borderRadius:
-          sec && ind == 0
-            ? "15px 15px 55px 15px"
-            : sec && ind == 4
-            ? "15px 55px 15px 15px"
-            : sec && ind == 6
-            ? "15px 15px 15px 55px"
-            : sec && ind == 8
-            ? "55px 15px 15px 15px"
-            : !sec && ind == 6
-            ? "55px 15px 15px 15px"
-            : 15,
+        borderTopLeftRadius: sec && ind === 0 && "35px ",
+        borderTopRightRadius: sec && ind === 6 && " 35px",
+        borderBottomRightRadius:
+          (sec && ind === 8 && "35px") || (!sec && ind === 6 && "35px"),
+        borderBottomLeftRadius: sec && ind === 4 && "35px",
       }}
       className={bt}
     ></motion.div>
@@ -60,7 +49,6 @@ export default function Lander() {
               type: "spring",
               stiffness: 60,
             }}
-            style={{ height: hei, width: wid }}
             className={bt}
           ></motion.div>
           <Boxx ind={1} />
@@ -78,7 +66,6 @@ export default function Lander() {
               type: "spring",
               stiffness: 60,
             }}
-            style={{ height: hei, width: wid }}
             className={`${bt} me-2`}
           ></motion.div>
         </div>
@@ -129,15 +116,15 @@ export default function Lander() {
               // type: "spring",
               // stiffness: 60,
             }}
-            style={{ height: hei, width: wid }}
-            className="br-15 shade1  m-1 position-absolute"
+            // style={{ height: hei, width: wid }}
+            className="boxx-br shade2 boxx m-1 position-absolute"
           ></motion.div>
         </div>
       </div>
     );
   };
   return (
-    <div className="vh-100 shade2 d-flex align-items-center justify-content-center">
+    <div className="vh-100 shade1 d-flex align-items-center justify-content-center">
       <JComp />
       <SComp />
       {/* <div>

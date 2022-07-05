@@ -16,7 +16,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App-header">
+      <div className="App-header overflow-hidden shade1">
         {/* <div className="bg-warning p-5 rounded shadow"></div> */}
         <Home />
       </div>

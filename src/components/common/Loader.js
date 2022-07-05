@@ -1,42 +1,48 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Modal } from "@mui/material";
 
 export default function Loader() {
-  const hei = 40;
-  const wid = 40;
+  const hei = 15;
+  const wid = 15;
   const bt = "br-15 bg-white li-shadow m-1";
-  const start = 1; //1
+  const start = 0.5; //1
   const inc = 0.1; //0.1
-  const dur = 0.15; //0.15
-  const rot = 540;
+  const dur = 2; //0.15
+  const rot = 7200;
 
-  const Boxx = ({ ind, sec }) => (
+  const Boxx = ({ ind, sec, me }) => (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
-      animate={{ scale: 1, opacity: 100, rotate: rot }}
+      animate={{
+        scale: [0, 1, 0, 0],
+        opacity: [0, 1, 0, 0],
+        rotate: [0, rot, 0, 0],
+      }}
       transition={{
         duration: dur,
-        delay: sec ? start + inc * 7 + inc * ind : start + inc * ind,
+        delay: sec ? start * 1.5 + inc * 7 + inc * ind : start + inc * ind,
         type: "spring",
         stiffness: 40,
+        repeat: Infinity,
       }}
       style={{
         height: hei,
         width: wid,
-        borderRadius:
-          sec && ind == 0
-            ? "15px 15px 55px 15px"
-            : sec && ind == 4
-            ? "15px 55px 15px 15px"
-            : sec && ind == 6
-            ? "15px 15px 15px 55px"
-            : sec && ind == 8
-            ? "55px 15px 15px 15px"
-            : !sec && ind == 6
-            ? "55px 15px 15px 15px"
-            : 15,
+        // borderRadius:
+        //   sec && ind == 2
+        //     ? "55px 15px 15px 15px"
+        //     : sec && ind == 4
+        //     ? "15px 15px 15px 55px"
+        //     : sec && ind == 6
+        //     ? "15px 55px 15px 15px"
+        //     : sec && ind == 8
+        //     ? "15px 15px 55px 15px"
+        //     : !sec && ind == 6
+        //     ? "15px 15px 55px 15px"
+        //     : 15,
       }}
-      className={bt}
+      className={`${me && "me-1"} ${bt}`}
     ></motion.div>
   );
 
@@ -51,38 +57,16 @@ export default function Loader() {
             style={{ height: hei, width: wid }}
             className={bt}
           ></motion.div> */}
-          <motion.div
-            initial={{ scale: 10 }}
-            animate={{ scale: 1, opacity: 100, rotate: rot }}
-            transition={{
-              duration: 1,
-              delay: 0,
-              type: "spring",
-              stiffness: 90,
-            }}
-            style={{ height: hei, width: wid }}
-            className={bt}
-          ></motion.div>
+          <Boxx ind={0} />
           <Boxx ind={1} />
           <Boxx ind={2} />
         </div>
         <div className=" d-flex flex-column align-items-end">
           <Boxx ind={3} />
           <Boxx ind={4} />
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ scale: 1, opacity: 100, rotate: rot }}
-            transition={{
-              duration: dur,
-              delay: start + inc * 5,
-              type: "spring",
-              stiffness: 60,
-            }}
-            style={{ height: hei, width: wid }}
-            className={`${bt} me-2`}
-          ></motion.div>
+          <Boxx ind={5} me />
         </div>
-        <div className=" d-flex pe-4">
+        <div className=" d-flex pe-2">
           <Boxx ind={7} />
           <Boxx ind={6} />
           {/* <motion.div
@@ -101,9 +85,9 @@ export default function Loader() {
     return (
       <div className="d-flex flex-column align-items-end ms-3">
         <div className=" d-flex ">
-          <Boxx ind={0} sec />
-          <Boxx ind={1} sec />
           <Boxx ind={2} sec />
+          <Boxx ind={1} sec />
+          <Boxx ind={0} sec />
         </div>
         <div className="w-100">
           <Boxx ind={3} sec />
@@ -137,23 +121,27 @@ export default function Loader() {
     );
   };
   return (
-    <div className="vh-100 load-bg d-flex align-items-center justify-content-center">
-      <JComp />
-      <SComp />
-      {/* <div>
-        <motion.div
-          // animate={{ rotate: 360 }}
-          // transition={{ duration: 2 }}
-          style={{ height: hei, width: wid }}
-          className="br-10 bg-white li-shadow mx-auto"
-        ></motion.div>
-        <motion.div
-          // animate={{ rotate: 360 }}
-          // transition={{ duration: 2 }}
-          style={{ height: hei, width: wid }}
-          className="br-10 bg-white li-shadow mx-auto"
-        ></motion.div>
-      </div> */}
-    </div>
+    <Modal
+      open={true}
+      onClose={() => {}}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+      // className="d-flex justify-content-center align-items-center py-sm-5 mx-2 mx-md-3 mx-lg-4 mx-lg-5"
+    >
+      <div
+        className="li-shadow br-20 shade2 d-flex align-items-center justify-content-center position-absolute"
+        style={{
+          height: 220,
+          width: 220,
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          outline: "none",
+        }}
+      >
+        <JComp />
+        <SComp />
+      </div>
+    </Modal>
   );
 }

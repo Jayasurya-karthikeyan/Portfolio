@@ -15,18 +15,18 @@ export const SocialData = [
     icon: <i class="bi bi-linkedin"></i>,
   },
   {
-    platform: "Facebook",
-    link: "link ******",
-    icon: <i class="bi bi-facebook"></i>,
+    platform: "Github",
+    link: "https://github.com/Jayasurya-karthikeyan",
+    icon: <i class="bi bi-github"></i>,
   },
   {
     platform: "Mail",
-    link: "link ******",
+    link: "mailto:surchankarthikeyan@gmail.com",
     icon: <i class="bi bi-envelope-fill"></i>,
   },
   {
     platform: "Call",
-    link: "tel:8665562570",
+    link: "tel:6374460535",
     icon: <i class="bi bi-telephone"></i>,
   },
 ];

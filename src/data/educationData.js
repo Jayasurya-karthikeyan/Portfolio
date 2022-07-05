@@ -19,10 +19,10 @@ export const EducationData = [
     schoolPic:
       "https://www.joonsquare.com/usermanage/image/business/st-patrick-matriculation-higher-secondary-school-pondicherry-13014/st-patrick-matriculation-higher-secondary-school-pondicherry-logo.png",
     location: "Pondicherry",
-    percentage: "89.4%",
+    percentage: "89.16%",
   },
   {
-    name: "LICET",
+    name: "Loyola-ICAM College of Engineering and Technology",
     qualification: "B.Tech",
     domain: "Information Technology",
     yearJoin: "2019",
@@ -30,6 +30,6 @@ export const EducationData = [
     schoolPic:
       "https://studentcorner.epsiindia.org/upload/college/licet-logo.png",
     location: "Chennai",
-    percentage: "8.874/10",
+    percentage: "8.91/10",
   },
 ];

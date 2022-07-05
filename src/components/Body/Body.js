@@ -4,13 +4,12 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import Work from "./Work";
 import Contact from "./Contact";
-import Client from "./Client";
 import Education from "./Education";
 
 function Body() {
   return (
     <div className="">
-      <div className="">
+      <div className="snap-container">
         <section id="about">
           <About />
         </section>
@@ -23,10 +22,10 @@ function Body() {
         <section id="skills">
           <Skills />
         </section>
-        <section id="work">
+        <section id="experience">
           <Work />
         </section>
-        <section id="contact">
+        <section id="contact" className="pt-5 pt-md-0">
           <Contact />
         </section>
         {/* <section id="client">

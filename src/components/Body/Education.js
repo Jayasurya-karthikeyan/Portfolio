@@ -1,5 +1,4 @@
 import React from "react";
-import Separator from "../common/Separator";
 import { EducationData } from "../../data/educationData";
 import Stack from "@mui/material/Stack";
 import Stepper from "@mui/material/Stepper";
@@ -13,10 +12,18 @@ import { makeStyles } from "@material-ui/core";
 import { Typography, Button, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
-import Avatar from "@mui/material/Avatar";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+import Title from "../common/Title";
+import { motion } from "framer-motion";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+} from "@mui/lab";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -131,11 +138,11 @@ function Education() {
   const classes = useStyles();
 
   return (
-    <div className="shade1 vh-100 p-4">
-      <div className="section-title mt-5">Education</div>
+    <div className="shade1 min-vh-100 p-4 pt-5 pt-xl-2 pt-xxl-5">
+      <Title title="EDUCATION" />
       {/* <Typography variant='h3' >Education</Typography> */}
-      <div className="school-card-wrap py-5 my-5">
-        <Stack sx={{ width: "100%" }} spacing={4}>
+      <div className="py-2 py-md-5 my-4 my-md-5 my-xl-3 my-xxl-5">
+        <Stack className="d-none d-md-block" sx={{ width: "100%" }} spacing={4}>
           <Stepper
             alternativeLabel
             activeStep={2}
@@ -145,68 +152,50 @@ function Education() {
               <Step key={school}>
                 <StepLabel StepIconComponent={QontoStepIcon}>
                   <Grid className="d-flex justify-content-center">
-                    <div
-                      className=" li-theme rounded li-shadow"
-                      style={{ minWidth: 250 }}
+                    <motion.div
+                      initial={{ rotateY: 180 }}
+                      whileInView={{ rotateY: 0 }}
+                      drag
+                      dragConstraints={{
+                        top: 0,
+                        left: -10,
+                        right: 10,
+                        bottom: 50,
+                      }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.8,
+                      }}
+                      className="scl-box shade3 br-20 li-shadow px-0 mt-md-4 d-flex flex-column justify-content-center"
                       key={index}
                     >
-                      <CardContent className="d-flex flex-column justify-content-center">
-                        <div className="d-flex justify-content-center">
-                          {index + 1 == data.length ? (
-                            <StyledBadge
-                              overlap="circular"
-                              anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "right",
-                              }}
-                              variant="dot"
-                            >
-                              <Avatar
-                                variant="circular"
-                                alt="Remy Sharp"
-                                src={school.schoolPic}
-                                // className={classes.sizeAvatar}
-                                sx={{ height: 150, width: 150 }}
-                              />
-                            </StyledBadge>
-                          ) : (
-                            <Avatar
-                              variant="circular"
-                              alt="Remy Sharp"
-                              // className={`${classes.sizeAvatar} && "offset-5"`}
-                              src={school.schoolPic}
-                              sx={{ height: 150, width: 150 }}
-                            />
-                          )}
-                        </div>
-                        <Typography
-                          className="text-white fw-600"
-                          variant="h5"
-                          component="div"
-                          sx={{ mt: 1.5 }}
-                        >
+                      <div className="d-flex justify-content-center py-3">
+                        <img
+                          alt={school.name}
+                          className="tl-avatar"
+                          src={school.schoolPic}
+                        />
+                      </div>
+                      <div className="shade2 w-100 px-2 py-3 br-20 li-y-shadow">
+                        <div className="text-white fw-600 fam1 scl-name">
                           {school.name}
-                        </Typography>
-                        <Typography
-                          sx={{ mb: 1.5 }}
-                          color="text.secondary"
-                          className="text-white"
-                        >
+                        </div>
+                        <div className="text-white fw-300 scl-year fam4">
                           {school.yearJoin} - {school.yearEnd}
-                        </Typography>
-                        <Typography variant="body2" className="text-white">
-                          {school.qualification}
-                          {school.domain ? (
-                            <span>
-                              <i class="bi bi-arrow-right"></i> {school.domain}{" "}
-                            </span>
-                          ) : null}
-                        </Typography>
-                        <Typography variant="h5" className="text-white">
+                        </div>
+                        <div className="text-white fam6 fw-300 scl-year">
+                          {school.qualification}{" "}
+                          {school.domain && (
+                            <ArrowRightAltIcon className="scl-year" />
+                          )}{" "}
+                          {school.domain}
+                        </div>
+                        <div className=" fam4 font4 fw-bold scl-name">
                           {school.percentage}
-                        </Typography>
-                      </CardContent>
-                    </div>
+                        </div>
+                      </div>
+                    </motion.div>
                   </Grid>
                   {/* <div className="school-card col-4 col-sm-6 offset-3 justify-content-center border border-3 border-dark rounded py-4">
                     <div key={index} className="school-info px-1">
@@ -238,6 +227,76 @@ function Education() {
             ))}
           </Stepper>
         </Stack>
+        <Timeline className="d-md-none tl-mar">
+          {data.map((school, ind) => (
+            <TimelineItem key={ind}>
+              <TimelineSeparator>
+                {ind + 1 != data.length ? (
+                  <>
+                    <Check
+                      className="text-white bg-success rounded-circle "
+                      sx={{ fontSize: 20 }}
+                    />
+                    <TimelineConnector />
+                  </>
+                ) : (
+                  <div
+                    className="p-1 rounded-circle border border-4 border-white"
+                    style={{ marginLeft: -3 }}
+                  ></div>
+                )}
+              </TimelineSeparator>
+              <TimelineContent>
+                <Grid className=" ms-1 mb-4">
+                  <motion.div
+                    initial={{ x: 180 }}
+                    whileInView={{ x: 0 }}
+                    // drag
+                    // dragConstraints={{
+                    //   top: 0,
+                    //   left: -10,
+                    //   right: 10,
+                    //   bottom: 50,
+                    // }}
+                    transition={{
+                      type: "spring",
+                      bounce: 0.2,
+                      duration: 0.4,
+                    }}
+                    className="scl-box shade3 br-20 li-shadow px-0 mt-md-4 d-flex justify-content-center align-items-center"
+                    // key={ind}
+                  >
+                    <div className="d-flex justify-content-center py-1 px-2">
+                      <img
+                        alt={school.name}
+                        className="tl-avatar"
+                        src={school.schoolPic}
+                      />
+                    </div>
+                    <div className="shade2 w-100 px-2 py-3 br-20 li-lx-shadow">
+                      <div className="text-white fw-600 fam1 scl-name">
+                        {school.name}
+                      </div>
+                      <div className="text-white fw-300 scl-year fam4">
+                        {school.yearJoin} - {school.yearEnd}
+                      </div>
+                      <div className="text-white fam6 fw-300 scl-year">
+                        {school.qualification}{" "}
+                        {school.domain && (
+                          <ArrowRightAltIcon className="scl-year" />
+                        )}{" "}
+                        {school.domain}
+                      </div>
+                      <div className=" fam4 font4 fw-bold scl-name">
+                        {school.percentage}
+                      </div>
+                    </div>
+                  </motion.div>
+                </Grid>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
         {/* {data.map((school, index) => {
           return (
             <>
