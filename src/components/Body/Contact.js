@@ -88,7 +88,9 @@ function Contact() {
   return (
     <div className="shade2 min-vh-100 d-flex flex-column justify-content-between position-relative">
       <div className="p-lg-4 pt-1 pt-md-4 pt-xl-2 pt-xxl-4 shade1 min-vh-100 br-con position-relative flex-column justify-content-between justify-content-md-start">
-        <Title title="CONTACT" />
+        <div className=" pt-5 pt-md-0">
+          <Title title="CONTACT" />
+        </div>
         <div className="px-3 py-3 px-md-2 px-lg-0">
           <div className="col-12 col-lg-10 mb-4 mb-lg-0 mt-md-5 pt-3 pt-lg-0 bg-con">
             <div className="px-sm-3 px-md-2 px-lg-2 d-md-flex align-items-center ">

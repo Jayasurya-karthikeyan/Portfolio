@@ -39,7 +39,7 @@ function Header() {
             onClick={() => setIsOpen(!isOpen)}
             className="  d-md-none "
           >
-            <MenuIcon className="m-3 text-white fw-bold tog-btn" />;
+            <MenuIcon className="m-3 text-white fw-bold tog-btn" />
           </motion.div>
         )}
       </AnimatePresence>
