@@ -115,7 +115,7 @@ function Skills() {
                           delay: 0.2,
                         }}
                         // drag
-                        className="li-shadow shade6 mt-1 br-10 py-1 px-1 mx-2 d-flex flex-column justify-content-around skl-box"
+                        className="li-shadow shade6 mt-1 br-10 pt-2 px-1 mx-2 d-flex flex-column justify-content-between skl-box"
                         // style={{ width: 80, height: 110 }}
                       >
                         {skill.img ? (
@@ -133,6 +133,30 @@ function Skills() {
                         )}
                         <div className="font1 text-center mb-1 fam2 fw-700 skl-name">
                           {skill.name}
+                        </div>
+                        <div
+                          className="font1 text-center fam2 mb-1 mx-1 fw-700 skl-name shade2 rounded-pill"
+                          style={{
+                            height: "4px ",
+                            boxShadow: "0px 0px 4px #0000005e",
+                          }}
+                        >
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: skill.prof }}
+                            transition={{
+                              delay: 0.6,
+                              duration: 2,
+                              type: "spring",
+                              bounce: 0.3,
+                            }}
+                            className="font1 text-center fam2 fw-700 skl-name shade4 rounded-pill"
+                            style={{
+                              height: "4px ",
+                              // width: skill.prof,
+                              // boxShadow: "0px 0px 4px #3ca6a6",
+                            }}
+                          ></motion.div>
                         </div>
                       </motion.div>
                     );
