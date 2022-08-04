@@ -199,7 +199,7 @@ export const SkillsData = [
       {
         name: "MS Excel",
         prof: "40%",
-        icon: <i class="devicon-nodejs-plain"></i>,
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Microsoft_Office_Excel_%282013%E2%80%932019%29.svg/2048px-Microsoft_Office_Excel_%282013%E2%80%932019%29.svg.png",
       },
       // {
       //   name: "OpenCV",
