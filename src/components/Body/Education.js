@@ -105,11 +105,11 @@ function QontoStepIcon(props) {
 
   return (
     <QontoStepIconRoot ownerState={{ active }} className={className}>
-      {completed ? (
+      {/* {completed ? ( */}
         <Check className="QontoStepIcon-completedIcon text-white fw-bold bg-success rounded-circle p-1" />
-      ) : (
+      {/* ) : (
         <div className="QontoStepIcon-circle" />
-      )}
+      )} */}
     </QontoStepIconRoot>
   );
 }
@@ -138,10 +138,10 @@ function Education() {
   const classes = useStyles();
 
   return (
-    <div className="shade1 min-vh-100 p-4 pt-5 pt-xl-2 pt-xxl-5">
+    <div className="shade1 min-vh-100 p-4 pt-5 pt-xl-2 pt-xxl-1">
       <Title title="EDUCATION" />
       {/* <Typography variant='h3' >Education</Typography> */}
-      <div className="py-2 py-md-5 my-4 my-md-5 my-xl-3 my-xxl-5">
+      <div className="py-2 py-md-5 my-4 my-md-5 my-xl-3 my-xxl-5 mt-xxl-2">
         <Stack className="d-none d-md-block" sx={{ width: "100%" }} spacing={4}>
           <Stepper
             alternativeLabel
@@ -231,19 +231,19 @@ function Education() {
           {data.map((school, ind) => (
             <TimelineItem key={ind}>
               <TimelineSeparator>
-                {ind + 1 != data.length ? (
+                <Check
+                  className="text-white bg-success rounded-circle "
+                  sx={{ fontSize: 20 }}
+                />
+                {ind + 1 != data.length && (
                   <>
-                    <Check
-                      className="text-white bg-success rounded-circle "
-                      sx={{ fontSize: 20 }}
-                    />
                     <TimelineConnector />
                   </>
-                ) : (
-                  <div
-                    className="p-1 rounded-circle border border-4 border-white"
-                    style={{ marginLeft: -3 }}
-                  ></div>
+                // ) : (
+                //   <div
+                //     className="p-1 rounded-circle border border-4 border-white"
+                //     style={{ marginLeft: -3 }}
+                //   ></div>
                 )}
               </TimelineSeparator>
               <TimelineContent>

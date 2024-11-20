@@ -45,14 +45,14 @@ function Work() {
                     style={{ height: 3 }}
                   ></div>
                   <div className="text-white fam4 work-pro">
-                    Product -{" "}
-                    <a
-                      href={work.demo}
+                    Projects -{" "}
+                    <span
+                      // href={work.demo}
                       target="_blank"
                       className="td-node text-white fam4 font2 cursor-pointer"
                     >
                       {work.work}
-                    </a>
+                    </span>
                   </div>
                 </div>
               </div>

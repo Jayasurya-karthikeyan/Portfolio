@@ -8,7 +8,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div
-      className="col-12 d-flex justify-content-end shade2 "
+      className="col-12 d-flex justify-content-end "
       // style={{ zIndex: "3 !important" }}
     >
       {/* <div className="brand px-lg-5 px-3 d-flex justify-content-between align-content-center">

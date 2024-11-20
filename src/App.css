@@ -951,7 +951,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 1366px) and (max-width: 1500px) {
+@media only screen and (min-width: 1366px){
   .name {
     font-size: 85px !important;
   }
@@ -1045,7 +1045,7 @@ html {
     display: block;
   }
 } */
-@media only screen and (min-width: 1501px) {
+/* @media only screen and (min-width: 1501px) {
   section {
     scroll-snap-align: start;
   }
@@ -1133,7 +1133,7 @@ html {
   .scl-name {
     font-size: 27px;
   }
-}
+} */
 
 @media only screen and (min-height: 500px) and (max-height: 630px) and (min-width: 1000px) and (max-width: 1400px) {
   .name {
@@ -1233,8 +1233,8 @@ html {
     height: 25px;
     width: 25px;
   }
-  
-.boxx-br {
-  border-radius: 8px;
-}
+
+  .boxx-br {
+    border-radius: 8px;
+  }
 }

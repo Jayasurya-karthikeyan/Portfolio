@@ -87,10 +87,14 @@ function About() {
         >
           {/* <div style={{ fontSize: 50 }}> Jayasurya Karthikeyan</div> */}
           <div className="fam5 fw-500 abt-des mb-2 mb-sm-3 mb-md-5">
-            &nbsp; &nbsp; A Versatile IT Student, who works and learns
-            exponentially, with excellent proficiency in development and design
-            and aspiring to learn new technologies. Currently focused on{" "}
-            <span className="font4 fw-bold"> AI/ML 🤖</span> domain.
+            &nbsp; &nbsp; An aspiring young talent with 1.5 years experience in
+            <span className="fw-bold font5">
+              {" "}
+              Full stack development
+            </span> and{" "}
+            <span className="fw-bold font5">Automation testing</span> with
+            impressive problem-solving skills and a progressive mindset to learn
+            new technologies
           </div>
           <div className="fam3 fw-600 font6 my-3 d-flex ddl justify-content-center justify-content-lg-start">
             <div className="overflow-hidden text-center text-lg-start">
@@ -137,7 +141,7 @@ function About() {
                 }}
                 className="fam3"
               >
-                Designer
+                QA Engineer
               </motion.div>
             </div>
             <motion.span

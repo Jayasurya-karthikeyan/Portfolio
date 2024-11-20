@@ -28,8 +28,8 @@ export const EducationData = [
     yearJoin: "2019",
     yearEnd: "2023",
     schoolPic:
-      "https://studentcorner.epsiindia.org/upload/college/licet-logo.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5mz5aJ16Ej5ArbaF2-bI5z2ThFJGdsvunTg&s",
     location: "Chennai",
-    percentage: "8.91/10",
+    percentage: "8.86/10",
   },
 ];
