@@ -28,7 +28,7 @@ export const ProjectData = [
     id: 2,
     title: "User Authentication Web Application",
     about:
-      "Web application that compries of basic Authentication that can be integrated to any application",
+      "Web application that comprises of basic Authentication that can be integrated to any application",
     tags: ["ReactJS", "NodeJS", "Express", "MongoDB"],
     demo: "https://drive.google.com/file/d/1SV5mT5irdTQOL3ZVTRyQvVVwfxkh3ej-/view?usp=sharing",
     github: "https://github.com/Jayasurya-karthikeyan/User-Authentication",
@@ -38,7 +38,7 @@ export const ProjectData = [
     id: 3,
     title: "Webstaurant",
     about:
-      "A Web application to view the dishes, add/edit comments and book tables of the Restaraunt",
+      "A Web application to view the dishes, add/edit comments and book tables of the Restaurant",
     tags: ["ReactJS", "Redux", "NodeJS", "Express", "MongoDB"],
     demo: "https://drive.google.com/file/d/1VEr_my85_RhDKjMQ5FsLX4uTIIjxGF7Z/view?usp=sharing",
     github: "https://github.com/Jayasurya-karthikeyan/Webstaurant",
@@ -47,7 +47,7 @@ export const ProjectData = [
   {
     id: 4,
     title: "NoteStore",
-    about: "A Authenticated platform to manipulate daily notes",
+    about: "An Authenticated platform to manipulate daily notes",
     tags: ["ReactJS", "Firebase"],
     demo: "https://the-project-one-anrmrl6lg-jayasurya-karthikeyan.vercel.app/",
     github: "https://github.com/Jayasurya-karthikeyan/Notestore",
