@@ -170,7 +170,7 @@ function About() {
                 }}
                 className="fam3"
               >
-                Leaner
+                Learner
               </motion.div>
             </div>
           </div>
