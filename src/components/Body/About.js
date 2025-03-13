@@ -87,12 +87,10 @@ function About() {
         >
           {/* <div style={{ fontSize: 50 }}> Jayasurya Karthikeyan</div> */}
           <div className="fam5 fw-500 abt-des mb-2 mb-sm-3 mb-md-5">
-            &nbsp; &nbsp; An aspiring young talent with 1.5 years experience in
-            <span className="fw-bold font5">
-              {" "}
-              Full stack development
-            </span> and{" "}
-            <span className="fw-bold font5">Automation testing</span> with
+            &nbsp; &nbsp; An aspiring young talent with 2 years experience in
+            <span className="fw-bold font5"> Full stack development{" "}</span>
+            {/*  with a versatile know
+            <span className="fw-bold font5">Automation testing</span> with */}
             impressive problem-solving skills and a progressive mindset to learn
             new technologies
           </div>
@@ -119,7 +117,7 @@ function About() {
               initial="hidden"
               animate="visible"
               variants={slashVariants}
-              className=" text-white fam3 mx-2"
+              className="text-white fam3 mx-2"
             >
               |
             </motion.span>
@@ -128,8 +126,8 @@ function About() {
                 // initial={{ x: 300 }}
                 animate={{
                   x: [
-                    -300, 0, 0, 0, 0, 0, 0, 0, -300, -300, -300, -300, -300,
-                    -300,
+                    -350, 0, 0, 0, 0, 0, 0, 0, -350, -350, -350, -350, -350,
+                    -350,
                   ],
                 }}
                 transition={{
@@ -141,7 +139,7 @@ function About() {
                 }}
                 className="fam3"
               >
-                QA Engineer
+                Problem Solver
               </motion.div>
             </div>
             <motion.span

@@ -51,11 +51,11 @@ export const SkillsData = [
         prof: "65%",
         icon: <i class="devicon-mysql-plain colored"></i>,
       },
-      {
-        name: "Firebase",
-        prof: "25%",
-        img: "https://miro.medium.com/max/300/1*R4c8lHBHuH5qyqOtZb3h-w.png",
-      },
+      // {
+      //   name: "Firebase",
+      //   prof: "25%",
+      //   img: "https://miro.medium.com/max/300/1*R4c8lHBHuH5qyqOtZb3h-w.png",
+      // },
       // {
       //   name: "PHP",
       //   prof: "30%",
@@ -73,26 +73,26 @@ export const SkillsData = [
       // },
     ],
   },
-  {
-    type: "Testing",
-    list: [
-      {
-        name: "Cypress",
-        prof: "70%",
-        img: "https://cdn.worldvectorlogo.com/logos/cypress-1.svg",
-      },
-      {
-        name: "Postman",
-        prof: "80%",
-        img: "https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png",
-      },
-      {
-        name: "Zephyr Scale",
-        prof: "45%",
-        img: "https://www.qax-camp.com.ua/wp-content/uploads/aSBbKlgz.jpg",
-      },
-    ],
-  },
+  // {
+  //   type: "Testing",
+  //   list: [
+  //     {
+  //       name: "Cypress",
+  //       prof: "70%",
+  //       img: "https://cdn.worldvectorlogo.com/logos/cypress-1.svg",
+  //     },
+  //     {
+  //       name: "Postman",
+  //       prof: "80%",
+  //       img: "https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png",
+  //     },
+  //     {
+  //       name: "Zephyr Scale",
+  //       prof: "45%",
+  //       img: "https://www.qax-camp.com.ua/wp-content/uploads/aSBbKlgz.jpg",
+  //     },
+  //   ],
+  // },
   // {
   //   type: "Programming",
   //   list: [
@@ -162,11 +162,11 @@ export const SkillsData = [
         prof: "55%",
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
       },
-      {
-        name: "Python",
-        prof: "35%",
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-      },
+      // {
+      //   name: "Python",
+      //   prof: "35%",
+      //   img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      // },
       {
         name: "Figma",
         prof: "75%",

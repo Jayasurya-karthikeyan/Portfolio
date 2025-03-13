@@ -538,7 +538,7 @@ html {
     font-size: 17px !important;
   }
   .ddl {
-    font-size: 18px;
+    font-size: 14px;
   }
   .abt-img {
     width: 35vw;
@@ -748,7 +748,7 @@ html {
   } */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .name {
     font-size: 60px !important;
     /* line-height: 1.1; */
@@ -853,7 +853,7 @@ html {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1365px) {
+@media only screen and (min-width: 992px) and (max-width: 1366px) {
   .name {
     font-size: 75px !important;
   }
@@ -861,7 +861,7 @@ html {
     font-size: 28px !important;
   }
   .ddl {
-    font-size: 32px;
+    font-size: 24px;
   }
   .abt-text {
     width: 860vw;
@@ -953,13 +953,13 @@ html {
 
 @media only screen and (min-width: 1366px){
   .name {
-    font-size: 85px !important;
+    font-size: 75px !important;
   }
   .abt-des {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
   .ddl {
-    font-size: 40px;
+    font-size: 32px;
   }
   .abt-text {
     width: 65vw;
